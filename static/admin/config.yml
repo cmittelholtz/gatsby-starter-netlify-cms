@@ -22,24 +22,26 @@ collections:
     label: "Speaker"
     folder: "src/pages/speakers"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "speaker"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Position", name: "position", widget: "string"}
       - {label: "Bio", name: "body", widget: "markdown"}
       - {label: "Photo", name: "photo", widget: "image"}
       - label: "Books"
         name: "books"
         widget: "list"
         fields: 
-          - {label: "Title", name: "bookTitle", widget: text}
-          - {label: "Link", name: "bookLink", widget: text}
+          - {label: "Title", name: "bookTitle", widget: "text"}
+          - {label: "Link", name: "bookLink", widget: "text"}
       - label: "Social Media"
         name: "socialMedia"
         widget: "object"
         fields: 
-          - {label: "Twitter", name: "twitter", widget: text}
-          - {label: "LinkedIn", name: "linkedIn", widget: text}
+          - {label: "Twitter", name: "twitter", widget: "text"}
+          - {label: "LinkedIn", name: "linkedIn", widget: "text"}
+          - {label: "Website", name: "website", widget: "text"}
 
   - name: "pages"
     label: "Pages"
